@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import Service from "./Components/Service";
 import Product from "./Components/Product";
 import MainLayout from './Routes/MainLayout';
+import Contact from './Components/Contact';
 
 const App = () => {
   const router = createBrowserRouter([{
@@ -22,6 +23,10 @@ const App = () => {
       {
         path:"product/:id",
         element:<Product/>
+      },
+      {
+        path:"contact",
+        element:<Contact/>
       }
     ]
   }])
