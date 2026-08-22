@@ -4,12 +4,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
+import "./Home.css";
 
 
 const Navigation = () => {
   return (
-    <>
-      <Navbar bg="primary p-3" data-bs-theme="light">
+    <div className='header'>
+      <Navbar bg=" p-3" data-bs-theme="light">
         <Container>
           <Navbar.Brand href="#home" className='text-light fs-3'>Navbar</Navbar.Brand>
           <Nav className="mx-auto">
@@ -18,10 +19,10 @@ const Navigation = () => {
             <Nav.Link href="#pricing" as={NavLink} to={"/product/1"} className='text-light'>Product</Nav.Link>
             <Nav.Link href="#pricing" as={NavLink} to={"/contact"} className='text-light'>Contact</Nav.Link>
           </Nav>
-          <Button className='bg-success'>Log In</Button>
+          <Button variant='light'>Log In</Button>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 }
 export default Navigation;
